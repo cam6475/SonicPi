@@ -1,25 +1,49 @@
 use_bpm 118
 use_synth :piano
 
+sample "C:/Users/cameron_patel/Downloads/travis_sounds-20220223T193408Z-001/travis_sounds/instrumental_intro.wav"
+sleep 16
+
+#m1 low
+live_loop :do_now do
+  1. times do
+    play :c3, sustain: 2
+    sleep 4
+    play :ab2, sustain: 2
+    sleep 4
+    play :eb3, sustain: 2
+    sleep 4
+    play :d3, sustain: 2
+    sleep 4
+    play :c3, sustain: 2
+    sleep 4
+    play :ab2, sustain: 2
+    sleep 4
+    play :eb3, sustain: 2
+    sleep 4
+    play :d3, sustain: 2
+    sleep 3
+    play :c3, sustain: 2
+    sleep 4
+  end
+  stop
+end
+
 #m1 high
-play :eb4
-sleep 1
-play :c4
-sleep 1
-play :eb4
-sleep 1
-play :c4
-sleep 1
+2. times do
+  play :eb4
+  sleep 1
+  play :c4
+  sleep 1
+end
 
 #m2 high
-play :f4
-sleep 1
-play :c4
-sleep 1
-play :f4
-sleep 1
-play :c4
-sleep 1
+2. times do
+  play :f4
+  sleep 1
+  play :c4
+  sleep 1
+end
 
 #m3 high
 play :g4
@@ -31,7 +55,7 @@ sleep 1
 play :bb3
 sleep 0.5
 play :g4
-sleep 1
+sleep 0.5
 
 #m4 high
 play :f4
@@ -43,27 +67,23 @@ sleep 1
 play :eb4
 sleep 0.5
 play :d4
-sleep 1
+sleep 0.5
 
 #m5 high
-play :eb4
-sleep 1
-play :c4
-sleep 1
-play :eb4
-sleep 1
-play :c4
-sleep 1
+2. times do
+  play :eb4
+  sleep 1
+  play :c4
+  sleep 1
+end
 
 #m6 high
-play :f4
-sleep 1
-play :c4
-sleep 1
-play :f4
-sleep 1
-play :c4
-sleep 1
+2. times do
+  play :f4
+  sleep 1
+  play :c4
+  sleep 1
+end
 
 #m7 high
 play :g4
@@ -75,7 +95,7 @@ sleep 1
 play :bb3
 sleep 0.5
 play :g4
-sleep 1
+sleep 0.5
 
 #m8 high
 play :f4
@@ -86,3 +106,20 @@ play :f4
 sleep 0.5
 play :g4
 sleep 0.5
+
+#m9 high
+play :c5
+sleep 0.5
+play :bb4
+sleep 0.5
+play :c5
+sleep 0.5
+play :bb4
+sleep 0.5
+play :bb4
+sleep 1
+play :bb4
+sleep 0.5
+play :g4
+sleep 0.5
+# Loading previous buffer contents. Please wait...
