@@ -1,6 +1,21 @@
 use_bpm 118
 use_synth :piano
 
+define :sounds_1 do
+  play :eb4
+  sleep 1
+  play :c4
+  sleep 1
+end
+
+define :sounds_2 do
+  play :f4
+  sleep 1
+  play :c4
+  sleep 1
+end
+
+
 sample "C:/Users/cameron_patel/Downloads/travis_sounds-20220223T193408Z-001/travis_sounds/instrumental_intro.wav"
 sleep 16
 
@@ -31,18 +46,12 @@ end
 
 #m1 high
 2. times do
-  play :eb4
-  sleep 1
-  play :c4
-  sleep 1
+  sounds_1
 end
 
 #m2 high
 2. times do
-  play :f4
-  sleep 1
-  play :c4
-  sleep 1
+  sounds_2
 end
 
 #m3 high
@@ -71,18 +80,12 @@ sleep 0.5
 
 #m5 high
 2. times do
-  play :eb4
-  sleep 1
-  play :c4
-  sleep 1
+  sounds_1
 end
 
 #m6 high
 2. times do
-  play :f4
-  sleep 1
-  play :c4
-  sleep 1
+  sounds_2
 end
 
 #m7 high
