@@ -15,8 +15,9 @@ define :sounds_2 do
   sleep 1
 end
 
+sa = "C:/Users/cameron_patel/Downloads/travis_sounds-20220223T193408Z-001/travis_sounds/instrumental_intro.wav"
 
-sample "C:/Users/cameron_patel/Downloads/travis_sounds-20220223T193408Z-001/travis_sounds/instrumental_intro.wav"
+sample sa
 sleep 16
 
 #m1 low
