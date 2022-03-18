@@ -1,11 +1,31 @@
 use_bpm 118
 use_synth :piano
+define :music do |a,e,i,o,u|
+  play a
+  sleep 1
+  play e
+  sleep 1
+  play i
+  sleep 1
+  play o
+  sleep 0.5
+  play u
+  sleep 0.5
+end
+
+i = 0
+alphabet = [:c3, :ab2, :eb3, :d3, :c3, :ab2, :eb3, :d3, :c3]
+sa2 = "C:/Users/cameron_patel/Downloads/yt5s.com - HD Apologize - OneRepublic ft. Timbaland Studio Acapella (128 kbps)-[AudioTrimmer.com].wav"
+sa = "C:/Users/cameron_patel/Downloads/travis_sounds-20220223T193408Z-001/travis_sounds/instrumental_intro.wav"
+a = 0
 
 define :sounds_1 do
-  play :eb4
+  play :eb4, amp: a
   sleep 1
-  play :c4
+  a = a + 0.125
+  play :c4, amp: a
   sleep 1
+  a = a + 0.12577
 end
 
 define :sounds_2 do
@@ -15,32 +35,28 @@ define :sounds_2 do
   sleep 1
 end
 
-sa = "C:/Users/cameron_patel/Downloads/travis_sounds-20220223T193408Z-001/travis_sounds/instrumental_intro.wav"
 
-sample sa
+sample sa, release: 16
 sleep 16
 
 #m1 low
 live_loop :do_now do
+  7. times do
+    play alphabet[i], sustain: 2
+    sleep 4
+    i = i + 1
+  end
+  stop
   1. times do
-    play :c3, sustain: 2
-    sleep 4
-    play :ab2, sustain: 2
-    sleep 4
-    play :eb3, sustain: 2
-    sleep 4
-    play :d3, sustain: 2
-    sleep 4
-    play :c3, sustain: 2
-    sleep 4
-    play :ab2, sustain: 2
-    sleep 4
-    play :eb3, sustain: 2
-    sleep 4
-    play :d3, sustain: 2
+    play alphabet[i], sustain: 2
     sleep 3
-    play :c3, sustain: 2
+    i = i + 1
+  end
+  stop
+  1. times do
+    play alphabet[i], sustain: 2
     sleep 4
+    i = i + 1
   end
   stop
 end
@@ -57,28 +73,10 @@ end
 
 #m3 high
 with_fx :slicer do
-  play :g4
-  sleep 1
-  play :bb3
-  sleep 1
-  play :g4
-  sleep 1
-  play :bb3
-  sleep 0.5
-  play :g4
-  sleep 0.5
+  music :g4, :bb3, :g4, :bb3, :g4
 end
 #m4 high
-play :f4
-sleep 1
-play :bb3
-sleep 1
-play :f4
-sleep 1
-play :eb4
-sleep 0.5
-play :d4
-sleep 0.5
+music :f4, :bb3, :f4, :eb4, :d4
 
 #m5 high
 2. times do
@@ -125,6 +123,11 @@ play :bb4
 sleep 1
 play :bb4
 sleep 0.5
-play :g4
+play :g4, amp: a
 sleep 0.5
+a = a + 0.25
+
+#end
+sample sa2
+
 # Loading previous buffer contents. Please wait...
