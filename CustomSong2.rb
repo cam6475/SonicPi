@@ -1,4 +1,4 @@
-  use_bpm 160
+use_bpm 160
 use_synth :piano
 
 
@@ -39,6 +39,8 @@ end
 
 #sample to use "C:/Users/cameron_patel/Downloads/yt5s.com - Leslie Odom Jr. - Wait For It_ Filtered Vocals (Unofficial Acapella) (128 kbps)-[AudioTrimmer.com].wav"
 #LOW MEASURES
+sample "C:/Users/cameron_patel/Downloads/Powfu - draw you inside my book (1) (mp3cut.net).wav"
+sleep 35
 sample "C:/Users/cameron_patel/Downloads/yt5s.com-Leslie-Odom-Jr.wav"
 sleep 10
 live_loop :do_stuff do
@@ -64,7 +66,7 @@ live_loop :do_stuff do
     #Ninth low Measure
     music_three :Db3, :Db2, 4
   end
-  2. times do
+  3. times do
     #Tenth low Measure
     play :bb2
     play :bb1
@@ -133,7 +135,7 @@ play  :F4
 sleep 1.25
 
 
-2. times do
+3. times do
   #Tenth Measure use array
   9. times do
     play letters[i]
